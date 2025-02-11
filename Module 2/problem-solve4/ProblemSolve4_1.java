@@ -10,8 +10,13 @@ public class ProblemSolve4_1 {
         int n = input.nextInt();
 
         // Add code here
+        if (n % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
 
-
+        input.close();
     }//end main
 
 }//end class

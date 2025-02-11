@@ -11,10 +11,27 @@ public class ProblemSolve4_3 {
 
         // set up Scanner to capture user input
         Scanner input = new Scanner(System.in);
-        int hours = input.nextInt();
-        double wage = input.nextDouble();
-        // Add code here
+        
+        // Read the number of hours worked and hourly wage from the user
+        int hours = input.nextInt(); // Input for hours worked
+        double wage = input.nextDouble(); // Input for hourly wage
+        
+        double totalPay; // Variable to store the total weekly pay
 
-    }// end main
+        // Calculate total pay based on hours worked
+        if (hours <= 40) {
+            // Regular pay calculation if hours worked are 40 or less
+            totalPay = hours * wage;
+        } else {
+            // Regular pay for the first 40 hours + overtime pay for hours above 40
+            totalPay = (40 * wage) + ((hours - 40) * (wage * 1.5));
+        }
 
-}// end class
+        // Output the total weekly pay
+        System.out.println("Final weekly pay: $" + totalPay);
+
+        // Close the scanner object to prevent resource leak
+        input.close();
+    } // end main
+
+} // end class
