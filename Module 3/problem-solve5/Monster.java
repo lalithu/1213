@@ -6,8 +6,13 @@
  */
 public class Monster {
     
-    private String naam = "Barfi";
-    private int health;
+    private String name; // Name
+    private int health; // Health
+
+    public Monster(String name, int startHealth) {
+        this.name = name;
+        health = startHealth;
+    }
 
     // Method Signature: takeDamage(int dmg) -> void
     // Purpose: Reduces the monster's health by the specified amount, ensuring health
@@ -19,6 +24,10 @@ public class Monster {
         if ((health - dmg) >= 0) {
             health = health - dmg; // health -=dmg
         }
+    }
+
+    public void roar(Player p) {        
+        p.takeDamage(50);
     }
 
     // Method Signature: heal(int amount) -> void
@@ -37,7 +46,6 @@ public class Monster {
         }
     }
 
-
     // Method Signature: displayStatus() -> void
     // Purpose: Prints the monster's current health, gold, and experience points.
     // Example: m.displayStatus() --> Outputs current stats of the monster
@@ -48,6 +56,6 @@ public class Monster {
         // System.out.println("Gold: " + gold);
         //System.out.println("Experience points: " + Xp);
 
-        System.out.println("Health: " + health + "\tGold: " + gold + "\tExperience points " + Xp);
+        System.out.println("Name: " + name + ", Health: " + health);
     }
 }

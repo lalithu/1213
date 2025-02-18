@@ -20,8 +20,8 @@ public class Playground {
         player.displayStatus();
 
         // Create Monster objects
-        Monster dragon = new Monster(150, "Dragon");
-        Monster goblin = new Monster(50, "Goblin");
+        Monster dragon = new Monster("Dragon", 150);
+        Monster goblin = new Monster("Goblin", 50);
 
         // Display monster status
         dragon.displayStatus();

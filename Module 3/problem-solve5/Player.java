@@ -80,4 +80,12 @@ public class Player {
 
         System.out.println("Health: " + health + "\tGold: " + gold + "\tExperience points " + Xp);
     }
+    
+    public static void main(String[] args) {
+        Player p = new Player(100, 0, 0);
+        p.gainXp(20);
+        p.takeDamage(50);
+        p.heal(25);
+        p.displayStatus();
+    }
 }
